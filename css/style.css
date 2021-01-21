@@ -29,12 +29,10 @@ body{
     margin: 0 auto;
 }
 
-.formulario h1{
-    font-size: 56px;
-    font-weight: 300;
-    font-family: 'Pacifico', cursive;
-    text-align: center;
-   
+.formulario img{
+    width: 150px;
+    height: 60px;
+    margin: 20px 150px;
 }
 
 .formulario h5{
