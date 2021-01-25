@@ -37,3 +37,4 @@ C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\r
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.pdb
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.genruntimeconfig.cache
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.csproj.CopyComplete
+C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Perfil\index.cshtml.g.cs

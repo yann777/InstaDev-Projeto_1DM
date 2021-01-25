@@ -11,16 +11,58 @@ html, body{
 }
 
 body{
-    background-color: #E5E5E5;
+    background-color: #ffffff;
 }
 
 .container{
     width: 30%;
-    margin: 100px auto;
-    
-    
+    margin: 50px auto;
 }
 
+/*Header*/
+header{
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+    height:70px;
+    border: 1px solid rgb(209, 206, 206);
+}
+.logo{
+    margin-top:15px;
+}
+.logo img{
+    width: 120px;
+    height: auto;
+}
+.search-box{
+    margin-top:25px;
+}
+input[type=search]{
+    width: 200px;
+    height: 25px;
+    border: 0.5px solid rgb(202, 202, 202);
+    font-size:14px;
+    padding-left: 70px;
+    border-radius: 3px;
+}
+.info-perfil{
+    margin-top:20px;
+}
+.info-perfil > a{
+    cursor: pointer;
+    padding: 0 10px;
+}
+.perfil{
+    width: 30px;
+    height: 30px;
+    border-radius:25px;
+    border:1px solid rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+
+
+/*Tela de cadastro*/
 .formulario{
     width: 470px;
     height: 760px;
@@ -65,9 +107,14 @@ body{
     background-color: #2686CC;
     border: none;
     color: white;
+    cursor: pointer;
     font-weight: 500;
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formulario > form > button:hover{
+    background-color: #5b9aec;
 }
 
 .formulario h6{
@@ -120,3 +167,116 @@ body{
     height: 50px;
     margin-left: 80px;
 }
+/*Tela de cadastro */
+
+/*Tela de perfil */
+
+.infos-perfil{
+    width:600px;
+    height:100px;
+    display:flex;
+    margin: 0 auto;
+}
+
+.foto-perfil{
+    display:flex;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    background-color:black;
+}
+
+.info{
+    width: 200px;
+    height: auto;
+    display:flex;
+    margin-left: 20px;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.info p{
+    padding: 0 15px;
+}
+
+.info h5{
+    font-size: 16px;
+}
+
+.seguidores{
+    display: flex;
+}
+
+.usuario{
+    width: 300px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.usuario a{
+    margin: 0 20px;
+}
+
+.publicacoes{
+    height: auto;
+    margin: 70px auto;
+}
+
+.publicacoes h4{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 100px;
+}
+
+.publicacao{
+    display:flex;
+    width:900px;
+    height:400px;
+    margin-top:100px;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.imagem{
+    width:400px;
+    height:400px;
+    background-color: black;
+}
+
+.info-publicacao{
+    display:flex;
+    width: 400px;
+    height: 80px;
+}
+
+.info-publicacao a{
+    width: 50px;
+    height: 50px;
+    background-color:black;
+    border-radius: 40px;
+    margin: 15px 25px;
+}
+
+.info-publicacao p{
+    margin-top:30px
+}
+
+.info-post{
+    display:flex;
+    margin: 28px 0;
+    height: 30px;
+}
+
+.info-post a{
+    margin: 0 8px;
+}
+
+.section-comentarios{
+    display:flex;
+    flex-direction:column;
+}
+
+/*Tela de perfil*/
+
+
+    
