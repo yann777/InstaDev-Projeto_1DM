@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+
+/*Váriaveis Globais*/
+
+/*Váriaveis Globais*/
 
 *{
     margin: 0;
@@ -50,20 +56,34 @@ input[type=search]{
     height: 70px;
     margin-top:20px;
 }
+
 .info-perfil > a{
     cursor: pointer;
-    padding: 0 10px;
 }
+
+.icons{
+    display:flex;
+}
+
+.icons li{
+    margin: 0 15px;
+    list-style: none;
+}
+/* 
 .perfil{
-    width: 30px;
-    height: 30px;
-    border-radius:25px;
-    border:1px solid rgb(0, 0, 0);
-    margin-left: 20px;
-    padding-top:10px;
+    width:50px;
+    height: 10px;
+    
+} */
+
+.perfil2{
+    width:25px;
+    height: 25px;
+    border-radius:13px;
+    border: 3px solid black;
+    padding: 3px 3px;
+    margin-top: 10px;
 }
-
-
 
 /*Tela de cadastro*/
 .formulario{
@@ -175,10 +195,11 @@ input[type=search]{
 /*Tela de perfil */
 
 .infos-perfil{
-    width:600px;
-    height:100px;
+    width:900px;
+    height:200px;
     display:flex;
     margin: 0 auto;
+    border-bottom: 1px solid rgb(214, 214, 214);
 }
 
 .foto-perfil{
@@ -187,18 +208,23 @@ input[type=search]{
     height:150px;
     border-radius: 50%;
     background-color:black;
+    margin-left: 25px;
+    margin-top:25px;
 }
+
 
 .info{
     width: 200px;
     height: auto;
     display:flex;
     margin-left: 20px;
-    margin-top: 15px;
+    margin-top: 25px;
     flex-direction: column;
 }
 
-.info p{
+.info > p{
+    font-size:20px;
+    font-weight:bold;
     padding: 0 15px;
 }
 
@@ -207,7 +233,13 @@ input[type=search]{
 }
 
 .seguidores{
+    margin-top:15px;
     display: flex;
+}
+
+.seguidores p{
+    padding: 0 15px;
+    cursor: pointer;
 }
 
 .usuario{
@@ -215,10 +247,12 @@ input[type=search]{
     margin-left: 15px;
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .usuario a{
     margin: 0 20px;
+    cursor: pointer;
 }
 
 .publicacoes{
@@ -230,13 +264,16 @@ input[type=search]{
     text-align: center;
     font-size: 16px;
     margin-top: 100px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
 }
+
 
 .publicacao{
     display:flex;
     width:900px;
     height:400px;
-    margin-top:100px;
+    margin-top:60px;
     border: 1px solid rgb(185, 185, 185);
 }
 
@@ -247,38 +284,72 @@ input[type=search]{
 }
 
 .info-publicacao{
-    display:flex;
-    width: 400px;
+    width: 500px;
+    max-width: 500px;
     height: 80px;
+    margin-left: 70px
 }
 
-.info-publicacao a{
+.imagemperfilpublicacao{
     width: 50px;
     height: 50px;
     background-color:black;
     border-radius: 40px;
-    margin: 15px 25px;
+    position: relative;
+    top: 37px;
+    right:7px;
 }
 
-.info-publicacao p{
-    margin-top:30px
-}
-
-.info-post{
+.nomeelocalizacao{
     display:flex;
-    margin: 28px 0;
-    height: 30px;
+    flex-direction: column;
+    margin-left: 57px;
 }
 
-.info-post a{
-    margin: 0 8px;
+.nomeelocalizacao > p{
+    margin-top:-15px;
+    font-weight:bold;
 }
 
-.section-comentarios{
+.nomeelocalizacao a{
+    margin-top: -16px;
+}
+
+.icons-publicacao{
+    margin-top:20px;
+}
+
+.icons-publicacao img{
+    cursor:pointer;
+}
+
+.comentarios{
+    margin-top:50px
+}
+
+.comentarios-pessoas{
     display:flex;
-    flex-direction:column;
 }
 
+.comentarios-pessoas a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.comentarios-pessoas a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.comentarios-pessoas p{
+    margin-left: 15px;
+}
+    
+.comentarios-pessoas img{
+    margin-left:200px;
+    cursor: pointer;
+}
 /*Tela de perfil*/
 
 
