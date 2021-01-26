@@ -19,7 +19,11 @@
                 <li><a href="#"><img src="../images/plane 1.svg" alt=""></a></li>
                 <li><a href="#"><img src="../images/compass 1.svg" alt=""></a></li>
                 <li><a href="#"><img src="../images/heart.svg" alt=""></a></li>
-                <li class="perfil2"><a class="perfil" href="../Perfil"></a></li>
+                <li onclick="botaoMenu()" class="perfil2"><a  class="perfil" href="../Perfil"></a></li>
+                <ul class="menu-perfil" id="menu-perfil">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Editar perfil</a></li>
+                </ul>
             </ul>          
         </div>
     </header>
@@ -28,6 +32,18 @@
             @RenderBody()
         </main>
 
+        <script>
+            function botaoMenu() {
+
+            var m = document.getElementById("menu-perfil")
+            if (m.style.display == "none") {
+                m.style.display = "block";
+            } else {
+                m.style.display = "none"
+            }
+        }
+        </script>
+     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

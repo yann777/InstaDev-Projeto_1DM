@@ -81,8 +81,21 @@ input[type=search]{
     height: 25px;
     border-radius:13px;
     border: 3px solid black;
-    padding: 3px 3px;
+    padding: 3px 10px;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+.menu-perfil{
+    width:150px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-top:50px;
+    margin-left: -80px;
+}
+
+.menu-perfil li{
+    padding: 10px 20px;
 }
 
 /*Tela de cadastro*/
