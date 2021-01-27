@@ -10,6 +10,7 @@ namespace InstaDev_Projeto_1DM.Models
         public string Email { get; set; }
         public string NomeCompleto { get; set; }
         public string Username { get; set;}
+        public string DataDeNascimento { get; set; }
         public string Password { get; set; }
 
         public const string PATH = "Database/usuario.csv";
@@ -27,7 +28,7 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Cadastro c)
         {
-            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.Password}";
+            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password}";
         }
 
         public void Delete(string username)
@@ -48,9 +49,10 @@ namespace InstaDev_Projeto_1DM.Models
                 string[] linha = item.Split(';');
 
                 Cadastro cadastro = new Cadastro();
-                cadastro.Email           = linha[0];
-                cadastro.NomeCompleto    = linha[1];
-                cadastro.Username        = linha[2];
+                cadastro.Email                  = linha[0];
+                cadastro.NomeCompleto           = linha[1];
+                cadastro.Username               = linha[2];
+                cadastro.DataDeNascimento       = linha[3];
 
                 cadastros.Add(cadastro);
             }

@@ -29,6 +29,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             novoCadastro.Email = form["Email"];
             novoCadastro.NomeCompleto = form["NomeCompleto"];
             novoCadastro.Username = form["Username"];
+            novoCadastro.DataDeNascimento = form["DataDeNascimento"];
             novoCadastro.Password = form["Senha"];
 
             cadastroModel.Create(novoCadastro);
