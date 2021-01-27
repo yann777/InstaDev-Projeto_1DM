@@ -24,24 +24,30 @@ namespace InstaDev_Projeto_1DM.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
-            Cadastro novoCadastro = new Cadastro();
 
-            novoCadastro.Email = form["Email"];
-            novoCadastro.NomeCompleto = form["NomeCompleto"];
-            novoCadastro.Username = form["Username"];
-            novoCadastro.DataDeNascimento = form["DataDeNascimento"];
-            novoCadastro.Password = form["Senha"];
+                Cadastro novoCadastro = new Cadastro();
 
-            cadastroModel.Create(novoCadastro);
+                novoCadastro.Email = form["Email"];
+                novoCadastro.NomeCompleto = form["NomeCompleto"];
+                novoCadastro.Username = form["Username"];
+                novoCadastro.DataDeNascimento = form["DataDeNascimento"];
+                novoCadastro.Password = form["Senha"];
+                novoCadastro.IdUser = Int32.Parse(form["IdUser"]);
+                
 
-            ViewBag.Cadastros = cadastroModel.ReadAll();
-            return LocalRedirect("~/Cadastro");
+                cadastroModel.Create(novoCadastro);
+
+                ViewBag.Cadastros = cadastroModel.ReadAll();
+                return LocalRedirect("~/Cadastro");
+                
+            
+            
         }
 
         [Route("Cadastro/username")]
-        public IActionResult Excluir(string username)
+        public IActionResult Excluir(int IdUser)
         {
-            cadastroModel.Delete(username);
+            cadastroModel.Delete(IdUser);
             return LocalRedirect("~/Cadastro");
         }
     }

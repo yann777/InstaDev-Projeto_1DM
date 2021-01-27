@@ -9,7 +9,7 @@ namespace InstaDev_Projeto_1DM.Interfaces
 
         List<Cadastro> ReadAll();
 
-        void Delete(string username);
+        void Delete(int IdUser);
 
         void Update(Cadastro alterarCadastro);
     }
