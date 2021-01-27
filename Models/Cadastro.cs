@@ -12,6 +12,7 @@ namespace InstaDev_Projeto_1DM.Models
         public string Username { get; set;}
         public string DataDeNascimento { get; set; }
         public string Password { get; set; }
+        public string ImagemPerfil { get; set; }
 
         public const string PATH = "Database/usuario.csv";
 
@@ -28,7 +29,7 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Cadastro c)
         {
-            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password}";
+            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password};{c.ImagemPerfil}";
         }
 
         public void Delete(string username)
