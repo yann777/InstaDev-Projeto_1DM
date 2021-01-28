@@ -37,7 +37,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[0] == form["Email"] || x.Split(";")[2] == form["Username"] && 
+                x.Split(";")[0] == form["Email"] &&  x.Split(";")[4] == form["Senha"] || x.Split(";")[2] == form["Username"] && 
                 x.Split(";")[4] == form["Senha"]
             );
 

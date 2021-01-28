@@ -5,46 +5,42 @@ using InstaDev_Projeto_1DM.Interfaces;
 
 namespace InstaDev_Projeto_1DM.Models
 {
-    public class Cadastro : InstadevBase , ICadastro
+    public class Publicacao : IPublicacao , InstadevBase
     {
-        public string Email { get; set; }
-        public string NomeCompleto { get; set; }
-        public string Username { get; set;}
-        public string DataDeNascimento { get; set; }
-        public string Password { get; set; }
-        public string ImagemPerfil { get; set; }
-        public int IdUser { get; set; }
-        public string Buscar{get;set;}
-        
-        public const string PATH = "Database/usuario.csv";
+        public int IdPublicacao {get;set;}
+        public string ImgPublicao {get;set;}
+        public string Legenda {get;set;}
+        public string Comentarios {get;set;}
 
-        public Cadastro()
+        public const string PATH = "Database/publicacoes.csv";
+
+        public Publicacao()
         {
             CreateFolderAndFile(PATH);
         }
 
-        public void Create(Cadastro c)
+        public void Create(Publicacao  p)
         {
-            string[] linha = { PrepararLinha(c) };
+            string[] linha = { PrepararLinha(p) };
             File.AppendAllLines(PATH, linha);
         }
 
-        private string PrepararLinha(Cadastro c)
+        private string PrepararLinha(Publicacoes p)
         {
-            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password};{c.ImagemPerfil};{c.IdUser}";
+            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.Comentarios}";
         }
 
-        public void Delete(int IdUser)
+        public void Delete(int IdPublicacao)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
 
-            linhas.RemoveAll(x => x.Split(";")[0] == IdUser.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == IdPublicacao.ToString());
             RewriteCSV(PATH, linhas);
         }
 
-        public List<Cadastro> ReadAll()
+        public List<Publicacao> ReadAll()
         {
-            List<Cadastro> cadastros = new List<Cadastro>();
+            List<Publicacao> publicacoes = new List<Publicacao>();
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
@@ -75,6 +71,5 @@ namespace InstaDev_Projeto_1DM.Models
             linhas.Add( PrepararLinha(alterarCadastro) );                        
             RewriteCSV(PATH, linhas); 
         }
-
     }
 }
