@@ -17,6 +17,7 @@ namespace InstaDev_Projeto_1DM.Controllers
         {
             Cadastro cadastroModel = new Cadastro();
             ViewBag.Cadastros = cadastroModel.ReadAll();
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
         }
     }

@@ -18,7 +18,7 @@
                 <li onclick="botaoMenu()" class="perfil2"><a  class="perfil" href="../Perfil"></a></li>
                 <ul class="menu-perfil" id="menu-perfil">
                     <li><a href="../Perfil">Perfil</a></li>
-                    <li><a href="#">Sair</a></li>
+                    <li><a asp-controller="Login" asp-action="Logout">Sair</a></li>
                 </ul>
             </ul>          
         </div>
@@ -30,18 +30,19 @@
         <div class="foto-perfil">
 
         </div>
-            <div class="info">
-                <p>Username</p>
+        <div class="info">
+                        <p>@ViewBag.UserName</p>            
+
                 <div class="seguidores">
                     <p>publicações</p>
                     <p>seguindo</p>
                     <p>seguidores</p>
                 </div>
-            <div class="usuario">
-                <h5>Enzzo Lima<!--Nome do perfil--></h5>
-                <a href="#">Sair</a>
-                <a href="#">Editar perfil</a>
-            </div>
+                <div class="usuario">
+                    <h5>@ViewBag.UserName<!--Nome do perfil--></h5>
+                    <a asp-controller="Login" asp-action="Logout">Sair</a>
+                    <a href="#">Editar perfil</a>
+                </div>
         </div>
     </div>
     <div class="publicacoes">

@@ -14,7 +14,7 @@ namespace InstaDev_Projeto_1DM.Models
         public string Password { get; set; }
         public string ImagemPerfil { get; set; }
         public int IdUser { get; set; }
-
+        
         public const string PATH = "Database/usuario.csv";
 
         public Cadastro()

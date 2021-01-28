@@ -24,7 +24,6 @@ C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\I
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.TagHelpers.output.cache
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.RazorCoreGenerate.cache
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Cadastro\index.cshtml.g.cs
-C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
@@ -38,3 +37,5 @@ C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\I
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.genruntimeconfig.cache
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.csproj.CopyComplete
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Perfil\index.cshtml.g.cs
+C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Login\index.cshtml.g.cs
+C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Home\index.cshtml.g.cs

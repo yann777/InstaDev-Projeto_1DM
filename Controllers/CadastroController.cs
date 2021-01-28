@@ -24,7 +24,7 @@ namespace InstaDev_Projeto_1DM.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
-
+            
                 Cadastro novoCadastro = new Cadastro();
 
                 novoCadastro.Email = form["Email"];
@@ -40,8 +40,7 @@ namespace InstaDev_Projeto_1DM.Controllers
                 ViewBag.Cadastros = cadastroModel.ReadAll();
                 return LocalRedirect("~/Cadastro");
                 
-            
-            
+           
         }
 
         [Route("Cadastro/username")]
