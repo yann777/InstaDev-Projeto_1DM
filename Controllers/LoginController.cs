@@ -46,6 +46,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             if(logado != null)
             {
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_User" , logado.Split(";")[2]);
                 return LocalRedirect("~/Home");
             } else
             {

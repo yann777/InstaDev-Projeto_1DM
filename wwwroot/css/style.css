@@ -42,7 +42,8 @@ body{
 }
 
 .container{
-    width: 30%;
+    width: 100%;
+    max-width: 900px;
     margin: 100px auto;
 }
 
@@ -241,7 +242,7 @@ input[type=search]{
 
 .formulario-2{
     width: 470px;
-    height: 550px;
+    height: 620px;
     background: white;
     border: 1px solid rgb(219, 219, 219);
     margin: 0 auto;
@@ -337,6 +338,7 @@ input[type=search]{
 }
 
 .seguidores{
+    width: 400px;
     margin-top:15px;
     display: flex;
 }
