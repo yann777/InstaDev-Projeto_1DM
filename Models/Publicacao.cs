@@ -28,7 +28,9 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.Comentarios};{p.UserPublicacao}";
+            Cadastro newCadastro = new Cadastro();
+
+            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.UserPublicacao = newCadastro.Username}";
         }
 
         public void Delete(int IdPublicacao)

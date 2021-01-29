@@ -18,6 +18,8 @@ namespace InstaDev_Projeto_1DM.Controllers
         public IActionResult Index()
         {
             ViewBag.Cadastros = cadastroModel.ReadAll();
+            ViewBag.UserName = cadastroModel.ReadAll();
+            ViewBag.User = cadastroModel.ReadAll();
             return View();
         }
 

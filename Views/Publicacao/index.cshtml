@@ -1,10 +1,9 @@
-@model Publicacao
+@model Cadastro
 @{
-    ViewData["Title"] = "Feed";
+    ViewData["Title"] = "Publicacao";
 }
 
-
-        <header>
+<header>
         <div class="logo"><img src="../images/Instadev.svg" alt=""></div>
         <div class="search-box">
          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
@@ -12,7 +11,7 @@
         </div><!--barra de pesquisa-->
         <div class="info-perfil">
             <ul class="icons">
-                <li><a href="../Home"><img src="../images/house.svg" alt=""></a></li>
+                <li><a href="../Publicacao"><img src="../images/house.svg" alt=""></a></li>
                 <li><a href="#"><img src="../images/plane 1.svg" alt=""></a></li>
                 <li><a href="#"><img src="../images/compass 1.svg" alt=""></a></li>
                 <li><a href="#"><img src="../images/heart.svg" alt=""></a></li>
@@ -42,6 +41,14 @@
             <li><img src="../img/samuel-rosa-bebê 1.png" alt="Samuel Rosa"></li>
             
             <li><img src="../img/chaves_metal 1.png" alt="Chaves Metal"></li>
+
+            <div class="menu-lateral-perfil">
+                <div class="img-user-2">
+
+                </div>
+                <h5><a href="../Perfil">@ViewBag.User</a></h5>
+                <p>@ViewBag.UserName</p>
+            </div>
             
         </ul>
         <div class="stories-nomes">
@@ -53,6 +60,7 @@
             <p>Samuel Rosa</p>
             <p>Cheves metal</p>
         </div>
+           
     </div>
 
     <div class="formPublicacao">
@@ -65,9 +73,7 @@
             </div>
         </div>
         <form method="POST" action='@Url.Action("Cadastrar")'  enctype="multipart/form-data">
-            <textarea rows="3" cols="12">
-               
-            </textarea>
+            <input type="text" name="Legenda" id="" placeholder="Digite aqui sua legenda...">
             <div class="form-group">
                 <label for="fupload" class="control-label label-bordered">Escolha uma imagem</label>
                 <input type="file" id="fupload" name="fupload" class="fupload form-control" />
@@ -84,16 +90,17 @@
 
                 </div>
                 <div class="name-user">
-                    <p>@post.UserPublicacao</p>
+                    <p>@ViewBag.User</p>
                     <p><a href="#">São Paulo, Brasil</a></p>
                 </div>         
             </div>
             <div class="imgPost">
                
-            <img src="wwwroot/imgPublicacao/Publicacoes/@post.ImgPublicacao">
+            <img src="../imgPublicacao/Publicacoes/@post.ImgPublicacao">
              
             </div>
             <div class="legenda">
+                    <a href="../Perfil">@ViewBag.User</a>
                     <p>@post.Legenda</p>
             </div>
             <div class="comentarios">
@@ -102,7 +109,3 @@
         </div>
     }
     </div>
-
-
-
-   

@@ -488,13 +488,34 @@ input[type=search]{
     padding: 0 20px;
 }
  .stories-nomes{
-     width: 800px;
+    width: 800px;
     display:flex;
  }
 
  .stories-nomes p{
      padding: 2px 15px;
  }
+
+.menu-lateral-perfil{
+    margin-left: 80px;
+    display: flex;
+}
+
+.img-user-2{
+    width: 60px;
+    height:60px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    margin: 0px 20px;
+}
+
+.menu-lateral-perfil h5{
+    margin: 10px 10px;
+}
+
+.menu-lateral-perfil a{
+    color: black;
+}
 
 .user{
     display:flex;
@@ -526,15 +547,16 @@ input[type=search]{
      margin-left: -90px;
  }
 
- .formPublicacao > form > textarea{
+ .formPublicacao > form > input[type=text]{
      width:320px;
      height: 50px;
      margin-top: 50px;
      margin-left: 20px;
      border: 1px solid rgb(219, 218, 218);
      border-radius:15px;
-     color: rgb(0, 0, 0);
-     padding: 10px 5px;
+     color: gray;
+     padding: 10px 15px;
+     background-color:  rgb(196, 196, 196);
  }
 
  input[type="file"] { 
@@ -543,14 +565,14 @@ input[type=search]{
  
  .label-bordered {
     width: 187px;
-    height: 30px;
+    height: 35px;
     background-color: rgb(196, 196, 196);
     color: gray;
     border: 1px solid #d6d6d6;
     padding: 3px 15px;
     border-radius: 10px;
     cursor: pointer;
-    margin: 64px 15px;
+    margin: 64px -58px;
  }
 
  .formPublicacao > form > button{
@@ -560,8 +582,8 @@ input[type=search]{
      text-align: center;
      background-color: rgb(14, 93, 196);
      color: white;
-     margin-top:64px;
-     border-radius:15px;
+     margin:64px 70px;
+     border-radius:10px;
  }
 
  .posts{
@@ -600,10 +622,33 @@ input[type=search]{
  }
 
  .imgPost{
-    width: 100%;
+    width: 600px;
     height: 500px;
     border-bottom: 1px solid #dee2e6;
  }
 
+ .imgPost img{
+     width: 600px;
+     height: 500px;
+ }
+
+ .legenda{
+     width:600px;
+     height: 50px;
+     border-bottom: 1px solid #dee2e6;
+     display:flex;
+ }
+
+.legenda a{
+    color: black;
+    margin: 13px 25px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+ .legenda p{
+    margin-top:15px;
+    color: rgb(27, 27, 27);
+ }
 
 /*TELA DE FEED*/
