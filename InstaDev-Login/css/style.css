@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Fonte Utilizada*/
 
 *{
 
@@ -61,7 +61,7 @@ body{
 
 }
 
-.formulario > form > input[type=email],[type=text],[type=password]
+.formulario > form > input[type=email],[type=text],[type=password] /*Campos para inserir informação de Login*/
 {
     width: 300px;
     height: 50px;
@@ -74,7 +74,7 @@ body{
 
 }
 
-.formulario > form > button{
+.formulario > form > button{ /*Botão de Login*/
 
     height: 50px;
     width: 300px;
@@ -97,7 +97,7 @@ body{
 
 }
 
-.flex-coluna{
+.flex-coluna{ /*Classes pré-pronta para fazer colunas*/
     
     height: 30px;
     /* background-color: #f70000; */
@@ -109,7 +109,7 @@ body{
     
 }
 
-.naotemconta{
+.naotemconta{ /*link para cadastro*/
 
     width: 470px;
     height: 70px;
@@ -136,7 +136,7 @@ body{
 
 }
 
-.aplicativos{
+.aplicativos{ 
 
     width: 470px;
     height: 80px;
@@ -145,7 +145,7 @@ body{
 
 }
 
-.aplicativos p{
+.aplicativos p{ /*Texto dos aplicativos*/
 
     margin-top: 8px;
     text-align: center;
@@ -155,7 +155,7 @@ body{
 
 }
 
-.aplicativos img{
+.aplicativos img{ /*Imagem dos aplicativos*/
 
     width: 150px;
     height: 50px;
