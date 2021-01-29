@@ -26,6 +26,12 @@ namespace InstaDev_Projeto_1DM.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
+
+                var id = cadastroModel.ReadAll().Count();
+
+                
+           
+            
             
                 Cadastro novoCadastro = new Cadastro();
 
@@ -34,13 +40,15 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novoCadastro.Username = form["Username"];
                 novoCadastro.DataDeNascimento = form["DataDeNascimento"];
                 novoCadastro.Password = form["Senha"];
-                novoCadastro.IdUser = Int32.Parse(form["IdUser"]);
+                novoCadastro.IdUser = id+1;
+                novoCadastro.Status = true;
                 
 
                 cadastroModel.Create(novoCadastro);
 
                 ViewBag.Cadastros = cadastroModel.ReadAll();
                 return LocalRedirect("~/Cadastro");
+                
                 
            
         }

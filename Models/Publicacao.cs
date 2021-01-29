@@ -9,9 +9,10 @@ namespace InstaDev_Projeto_1DM.Models
     {
         public int IdPublicacao {get;set;}
         public string ImgPublicacao {get;set;}
-        public string UserPublicacao {get;set;}
+        public int IdUsuario {get;set;}
         public string Legenda {get;set;}
-        public string Comentarios {get;set;}
+        public int Likes { get; set;}
+        public bool Status { get; set;}
 
         public const string PATH = "Database/publicacoes.csv";
 
@@ -30,7 +31,7 @@ namespace InstaDev_Projeto_1DM.Models
         {
             Cadastro newCadastro = new Cadastro();
 
-            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.UserPublicacao = newCadastro.Username}";
+            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.IdUsuario};{p.Likes};{p.Status}";
         }
 
         public void Delete(int IdPublicacao)
@@ -54,6 +55,8 @@ namespace InstaDev_Projeto_1DM.Models
                 publicar.IdPublicacao           = Int32.Parse( linha[0] );
                 publicar.ImgPublicacao          = linha[1];
                 publicar.Legenda                = linha[2];
+                publicar.IdUsuario              = Int32.Parse( linha[3] );
+                publicar.Status                 = bool.Parse( linha[5] );
 
                 publicacoes.Add(publicar);
             }

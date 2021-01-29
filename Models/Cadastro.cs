@@ -14,7 +14,9 @@ namespace InstaDev_Projeto_1DM.Models
         public string Password { get; set; }
         public string ImagemPerfil { get; set; }
         public int IdUser { get; set; }
+        public int[] seguidos = new int[45];
         public string Buscar{get;set;}
+        public bool Status { get; set;}
         
         public const string PATH = "Database/usuario.csv";
 
@@ -31,7 +33,7 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Cadastro c)
         {
-            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password};{c.ImagemPerfil};{c.IdUser}";
+            return $"{c.Email};{c.NomeCompleto};{c.Username};{c.DataDeNascimento};{c.Password};{c.ImagemPerfil};{c.IdUser};{c.Status}";
         }
 
         public void Delete(int IdUser)
@@ -58,6 +60,7 @@ namespace InstaDev_Projeto_1DM.Models
                 cadastro.DataDeNascimento       = linha[3];
                 cadastro.ImagemPerfil           = linha[5];
                 cadastro.IdUser                 = Int32.Parse( linha[6] );
+                cadastro.Status                 = bool.Parse( linha[7] );
 
                 cadastros.Add(cadastro);
             }

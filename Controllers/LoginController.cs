@@ -47,7 +47,9 @@ namespace InstaDev_Projeto_1DM.Controllers
             {
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
                 HttpContext.Session.SetString("_User" , logado.Split(";")[2]);
+
                 return LocalRedirect("~/Publicacao");
+                
             } else
             {
                 Mensagem = "Dados incorretos, tente novamente...";

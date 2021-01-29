@@ -490,6 +490,7 @@ input[type=search]{
  .stories-nomes{
     width: 800px;
     display:flex;
+    margin-top:-30px;
  }
 
  .stories-nomes p{
@@ -497,8 +498,11 @@ input[type=search]{
  }
 
 .menu-lateral-perfil{
-    margin-left: 80px;
+    width: 260px;
+    height:140px;
+    margin: -23px 30px;
     display: flex;
+    border: 1px solid #dee2e6;
 }
 
 .img-user-2{
@@ -506,15 +510,26 @@ input[type=search]{
     height:60px;
     border-radius: 30px;
     border: 1px solid gray;
-    margin: 0px 20px;
+    margin: 25px 20px;
 }
 
-.menu-lateral-perfil h5{
-    margin: 10px 10px;
+.menu-info-user{
+    width: 140px;
+    display:flex;
+    flex-direction: column;
+    margin: 25px 5px;;
 }
 
-.menu-lateral-perfil a{
+.menu-info-user h5{
+    margin: 5px 5px;
+}
+
+.menu-info-user a{
     color: black;
+}
+
+.menu-info-user p{
+    margin: 0 5px;
 }
 
 .user{
@@ -534,11 +549,11 @@ input[type=search]{
 }
 
  .formPublicacao{
-     width: auto;
-     height: 160px;
-     border:1px solid  rgb(218, 218, 218);
-     display:flex;
-     margin: 80px -20px;
+    width: 730px;
+    height: 160px;
+    border:1px solid  rgb(218, 218, 218);
+    display:flex;
+    margin: 80px 0;
  }
 
  .formPublicacao > form{
@@ -548,10 +563,10 @@ input[type=search]{
  }
 
  .formPublicacao > form > input[type=text]{
-     width:320px;
+     width:280px;
      height: 50px;
      margin-top: 50px;
-     margin-left: 20px;
+     margin-left: -20px;
      border: 1px solid rgb(219, 218, 218);
      border-radius:15px;
      color: gray;
@@ -572,7 +587,9 @@ input[type=search]{
     padding: 3px 15px;
     border-radius: 10px;
     cursor: pointer;
-    margin: 64px -58px;
+    margin-top: 64px;
+    margin-left: -75px;
+    margin-right: -60px;
  }
 
  .formPublicacao > form > button{
@@ -587,7 +604,7 @@ input[type=search]{
  }
 
  .posts{
-    width: 600px;
+    width: 730px;
     height: 800px;
     border: 1px solid rgb(219, 218, 218);
     margin-top: 80px;
@@ -622,18 +639,18 @@ input[type=search]{
  }
 
  .imgPost{
-    width: 600px;
+    width: 730px;
     height: 500px;
     border-bottom: 1px solid #dee2e6;
  }
 
  .imgPost img{
-     width: 600px;
-     height: 500px;
+    width: 730px;
+    height: 500px;
  }
 
  .legenda{
-     width:600px;
+     width:730px;
      height: 50px;
      border-bottom: 1px solid #dee2e6;
      display:flex;
