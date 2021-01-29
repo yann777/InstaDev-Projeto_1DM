@@ -1,0 +1,108 @@
+@model Publicacao
+@{
+    ViewData["Title"] = "Feed";
+}
+
+
+        <header>
+        <div class="logo"><img src="../images/Instadev.svg" alt=""></div>
+        <div class="search-box">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+            <input type="search" name="pesquisar" id="pesquisa" placeholder="Pesquisar"><i class="bi bi-search"></i>
+        </div><!--barra de pesquisa-->
+        <div class="info-perfil">
+            <ul class="icons">
+                <li><a href="../Home"><img src="../images/house.svg" alt=""></a></li>
+                <li><a href="#"><img src="../images/plane 1.svg" alt=""></a></li>
+                <li><a href="#"><img src="../images/compass 1.svg" alt=""></a></li>
+                <li><a href="#"><img src="../images/heart.svg" alt=""></a></li>
+                <li onclick="botaoMenu()" class="perfil2"><a  class="perfil" href="../Perfil"></a></li>
+                <ul class="menu-perfil" id="menu-perfil">
+                    <li><a href="../Perfil">Perfil</a></li>
+                    <li><a asp-controller="Login" asp-action="Logout">Sair</a></li>
+                </ul>
+            </ul>          
+        </div>
+
+</header>
+
+<div class="container">
+    <div class="story">
+        <ul class="stories">
+            <li><img src="../img/vin-diesel 1.png" alt="vin-diesel"></li>
+          
+            <li><img src="../img/gabigordo 1.png" alt="Gabi-gordo"></li>
+            
+            <li><img src="../img/will-baiano 1.png" alt="Will Baiano"></li>
+          
+            <li><img src="../img/tony_stark 1.png" alt="Tony Stark"></li>
+            
+            <li><img src="../img/pele 1.png" alt="Pelé"></li>
+            
+            <li><img src="../img/samuel-rosa-bebê 1.png" alt="Samuel Rosa"></li>
+            
+            <li><img src="../img/chaves_metal 1.png" alt="Chaves Metal"></li>
+            
+        </ul>
+        <div class="stories-nomes">
+            <p>vin_diesel</p>
+            <p>Gabi_gordo</p>
+            <p>Will Baiano</p>
+            <p>Tony Stark</p>
+            <p>Pelé</p>
+            <p>Samuel Rosa</p>
+            <p>Cheves metal</p>
+        </div>
+    </div>
+
+    <div class="formPublicacao">
+        <div class="user">
+            <div class="img-user">
+
+            </div>
+            <div class="secao-postar">
+                <p>Postar</p>
+            </div>
+        </div>
+        <form method="POST" action='@Url.Action("Cadastrar")'  enctype="multipart/form-data">
+            <textarea rows="3" cols="12">
+               
+            </textarea>
+            <div class="form-group">
+                <label for="fupload" class="control-label label-bordered">Escolha uma imagem</label>
+                <input type="file" id="fupload" name="fupload" class="fupload form-control" />
+            </div>
+            <button class="publi" type="submit">Postar</button>
+        </form>
+    </div>
+
+    @foreach (Publicacao post in ViewBag.Publicacoes)
+    {
+        <div class="posts">
+            <div class="info-user-post">
+                <div class="img-user">
+
+                </div>
+                <div class="name-user">
+                    <p>@post.UserPublicacao</p>
+                    <p><a href="#">São Paulo, Brasil</a></p>
+                </div>         
+            </div>
+            <div class="imgPost">
+               
+            <img src="wwwroot/imgPublicacao/Publicacoes/@post.ImgPublicacao">
+             
+            </div>
+            <div class="legenda">
+                    <p>@post.Legenda</p>
+            </div>
+            <div class="comentarios">
+
+            </div>
+        </div>
+    }
+    </div>
+
+
+
+   

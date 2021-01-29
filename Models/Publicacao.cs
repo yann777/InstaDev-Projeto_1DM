@@ -5,10 +5,11 @@ using InstaDev_Projeto_1DM.Interfaces;
 
 namespace InstaDev_Projeto_1DM.Models
 {
-    public class Publicacao : IPublicacao , InstadevBase
+    public class Publicacao : InstadevBase , IPublicacao 
     {
         public int IdPublicacao {get;set;}
-        public string ImgPublicao {get;set;}
+        public string ImgPublicacao {get;set;}
+        public string UserPublicacao {get;set;}
         public string Legenda {get;set;}
         public string Comentarios {get;set;}
 
@@ -25,9 +26,9 @@ namespace InstaDev_Projeto_1DM.Models
             File.AppendAllLines(PATH, linha);
         }
 
-        private string PrepararLinha(Publicacoes p)
+        private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.Comentarios}";
+            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.Comentarios};{p.UserPublicacao}";
         }
 
         public void Delete(int IdPublicacao)
@@ -47,28 +48,23 @@ namespace InstaDev_Projeto_1DM.Models
             {
                 string[] linha = item.Split(';');
 
-                Cadastro cadastro = new Cadastro();
-                cadastro.Email                  = linha[0];
-                cadastro.NomeCompleto           = linha[1];
-                cadastro.Username               = linha[2];
-                cadastro.DataDeNascimento       = linha[3];
-                cadastro.ImagemPerfil           = linha[5];
-                cadastro.IdUser                 = Int32.Parse( linha[6] );
+                Publicacao publicar = new Publicacao();
+                publicar.IdPublicacao           = Int32.Parse( linha[0] );
+                publicar.ImgPublicacao          = linha[1];
+                publicar.Legenda                = linha[2];
 
-                cadastros.Add(cadastro);
+                publicacoes.Add(publicar);
             }
 
-            return cadastros;
+            return publicacoes;
         }
 
-        public void Update(Cadastro alterarCadastro)
+        public void Update(Publicacao alterarPublicacao)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[1] == alterarCadastro.NomeCompleto);
-            linhas.RemoveAll(x => x.Split(";")[2] == alterarCadastro.Username);
-            linhas.RemoveAll(x => x.Split(";")[3] == alterarCadastro.DataDeNascimento);
-            linhas.RemoveAll(x => x.Split(";")[5] == alterarCadastro.ImagemPerfil);
-            linhas.Add( PrepararLinha(alterarCadastro) );                        
+            linhas.RemoveAll(x => x.Split(";")[1] == alterarPublicacao.ImgPublicacao);
+            linhas.RemoveAll(x => x.Split(";")[2] == alterarPublicacao.Legenda);
+            linhas.Add( PrepararLinha(alterarPublicacao) );                        
             RewriteCSV(PATH, linhas); 
         }
     }
