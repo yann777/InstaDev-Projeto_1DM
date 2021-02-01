@@ -19,8 +19,10 @@ namespace InstaDev_Projeto_1DM.Controllers
 
         public IActionResult Index()
         {
+
             ViewBag.User = HttpContext.Session.GetString("_User");
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            ViewBag.UserId = HttpContext.Session.GetString("_UserId");
 
             Cadastro cadastroModel = new Cadastro();
             ViewBag.Cadastros = cadastroModel.ReadAll();
@@ -35,13 +37,14 @@ namespace InstaDev_Projeto_1DM.Controllers
            
                 Publicacao novaPublicacao = new Publicacao();
                 Cadastro usuario = new Cadastro();
-                List<string> csv = usuario.ReadAllLinesCSV("Database/usuario.csv");
+
+                ViewBag.UserId = HttpContext.Session.GetString("_UserId");
 
                 var id = publicacaoModel.ReadAll().Count(); //Count() Serve para contar as linhas de um arquivo ou a quantidade de objetos
 
-
                 novaPublicacao.Legenda = form["Legenda"];
                 novaPublicacao.IdPublicacao = id+1;
+                novaPublicacao.IdUsuario = ViewBag.UserId;
                 
                 novaPublicacao.Status = true;
 
@@ -77,9 +80,9 @@ namespace InstaDev_Projeto_1DM.Controllers
         }
 
         [Route("Publicacao/{idPublicacao}")]
-        public IActionResult Excluir(int IdUser)
+        public IActionResult Excluir(int IdPublicacao)
         {
-            publicacaoModel.Delete(IdUser);
+            publicacaoModel.Delete(IdPublicacao);
             return LocalRedirect("~/Publicacao");
 
         }

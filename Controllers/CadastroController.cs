@@ -14,12 +14,15 @@ namespace InstaDev_Projeto_1DM.Controllers
     public class CadastroController : Controller
     {
         Cadastro cadastroModel = new Cadastro();
+        
 
         public IActionResult Index()
         {
             ViewBag.Cadastros = cadastroModel.ReadAll();
             ViewBag.UserName = cadastroModel.ReadAll();
             ViewBag.User = cadastroModel.ReadAll();
+            ViewBag.UserId = cadastroModel.ReadAll();
+           
             return View();
         }
 
@@ -29,9 +32,7 @@ namespace InstaDev_Projeto_1DM.Controllers
 
                 var id = cadastroModel.ReadAll().Count();
 
-                
            
-            
             
                 Cadastro novoCadastro = new Cadastro();
 

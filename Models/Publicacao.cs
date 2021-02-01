@@ -9,7 +9,7 @@ namespace InstaDev_Projeto_1DM.Models
     {
         public int IdPublicacao {get;set;}
         public string ImgPublicacao {get;set;}
-        public int IdUsuario {get;set;}
+        public string IdUsuario {get;set;}
         public string Legenda {get;set;}
         public int Likes { get; set;}
         public bool Status { get; set;}
@@ -55,7 +55,7 @@ namespace InstaDev_Projeto_1DM.Models
                 publicar.IdPublicacao           = Int32.Parse( linha[0] );
                 publicar.ImgPublicacao          = linha[1];
                 publicar.Legenda                = linha[2];
-                publicar.IdUsuario              = Int32.Parse( linha[3] );
+                publicar.IdUsuario              =  linha[3];
                 publicar.Status                 = bool.Parse( linha[5] );
 
                 publicacoes.Add(publicar);
