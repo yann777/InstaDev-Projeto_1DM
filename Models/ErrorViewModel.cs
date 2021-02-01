@@ -1,6 +1,6 @@
 using System;
 
-namespace InstaDev.Models
+namespace INSTADEV_EDIT.Models
 {
     public class ErrorViewModel
     {
