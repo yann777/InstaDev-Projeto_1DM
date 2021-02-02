@@ -35,3 +35,40 @@ C:\Users\andre\OneDrive\Área de Trabalho\INSTADEV-EDIT\obj\Debug\netcoreapp3.1\
 C:\Users\andre\OneDrive\Área de Trabalho\INSTADEV-EDIT\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.pdb
 C:\Users\andre\OneDrive\Área de Trabalho\INSTADEV-EDIT\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Área de Trabalho\INSTADEV-EDIT\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.csproj.CopyComplete
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.exe
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.deps.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.runtimeconfig.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.runtimeconfig.dev.json
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.dll
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.pdb
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.Views.dll
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\bin\Debug\netcoreapp3.1\INSTADEV-EDIT.Views.pdb
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.RazorAssemblyInfo.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.RazorAssemblyInfo.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.TagHelpers.input.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.TagHelpers.output.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.RazorCoreGenerate.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.RazorTargetAssemblyInfo.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.RazorTargetAssemblyInfo.cs
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.Views.pdb
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\staticwebassets\INSTADEV-EDIT.StaticWebAssets.Manifest.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\staticwebassets\INSTADEV-EDIT.StaticWebAssets.xml
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.dll
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.pdb
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.genruntimeconfig.cache
+C:\Users\andre\OneDrive\Área de Trabalho\meu projeto 2\InstaDev-Projeto_1DM\obj\Debug\netcoreapp3.1\INSTADEV-EDIT.csproj.CopyComplete
