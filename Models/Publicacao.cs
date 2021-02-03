@@ -34,8 +34,12 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Publicacao p)
         {
-            throw new NotImplementedException();
+            
+
+            return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.IdUsuario};{p.Likes};{p.Status}";
         }
+
+        
 
         public List<Publicacao> ReadAll()
         {
