@@ -59,7 +59,7 @@ namespace InstaDev_Projeto_1DM.Models
                 cadastro.Username               = linha[2];
                 cadastro.DataDeNascimento       = linha[3];
                 cadastro.ImagemPerfil           = linha[5];
-                cadastro.IdUser                 = Int32.Parse( linha[6] );
+                cadastro.IdUser                 = Int32.Parse(linha[6]);
                 cadastro.Status                 = bool.Parse( linha[7] );
 
                 cadastros.Add(cadastro);

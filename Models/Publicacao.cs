@@ -9,7 +9,7 @@ namespace InstaDev_Projeto_1DM.Models
     {
         public int IdPublicacao {get;set;}
         public string ImgPublicacao {get;set;}
-        public string IdUsuario {get;set;}
+        public int IdUsuario {get;set;}
         public string Legenda {get;set;}
         public int Likes { get; set;}
         public bool Status { get; set;}
@@ -21,11 +21,16 @@ namespace InstaDev_Projeto_1DM.Models
             CreateFolderAndFile(PATH);
         }
 
+
+
         public void Create(Publicacao  p)
         {
             string[] linha = { PrepararLinha(p) };
             File.AppendAllLines(PATH, linha);
         }
+
+
+
 
         private string PrepararLinha(Publicacao p)
         {
@@ -33,6 +38,8 @@ namespace InstaDev_Projeto_1DM.Models
 
             return $"{p.IdPublicacao};{p.ImgPublicacao};{p.Legenda};{p.IdUsuario};{p.Likes};{p.Status}";
         }
+
+
 
         public void Delete(int IdPublicacao)
         {
@@ -42,6 +49,9 @@ namespace InstaDev_Projeto_1DM.Models
             RewriteCSV(PATH, linhas);
         }
 
+
+
+
         public List<Publicacao> ReadAll()
         {
             List<Publicacao> publicacoes = new List<Publicacao>();
@@ -49,13 +59,13 @@ namespace InstaDev_Projeto_1DM.Models
 
             foreach (var item in linhas)
             {
-                string[] linha = item.Split(';');
+                string[] linha = item.Split(";");
 
                 Publicacao publicar = new Publicacao();
                 publicar.IdPublicacao           = Int32.Parse( linha[0] );
                 publicar.ImgPublicacao          = linha[1];
                 publicar.Legenda                = linha[2];
-                publicar.IdUsuario              =  linha[3];
+                publicar.IdUsuario              = Int32.Parse(linha[3]);
                 publicar.Status                 = bool.Parse( linha[5] );
 
                 publicacoes.Add(publicar);
@@ -63,6 +73,8 @@ namespace InstaDev_Projeto_1DM.Models
 
             return publicacoes;
         }
+
+
 
         public void Update(Publicacao alterarPublicacao)
         {
@@ -72,5 +84,15 @@ namespace InstaDev_Projeto_1DM.Models
             linhas.Add( PrepararLinha(alterarPublicacao) );                        
             RewriteCSV(PATH, linhas); 
         }
+
+        public string RetornarNome(int id) //Id usuario que cadastrou a publicação
+          {
+            Cadastro nome = new Cadastro(); //Usuário
+            List<Cadastro> csv = nome.ReadAll();
+
+            Cadastro userPubli = csv.Find(x => x.IdUser == id);
+          
+            return userPubli.Username;
+         }
     }
 }

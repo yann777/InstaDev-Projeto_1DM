@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using InstaDev_Projeto_1DM.Models;
+using System;
 
 
 namespace InstaDev_Projeto_1DM.Controllers
@@ -47,6 +48,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             {
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
                 HttpContext.Session.SetString("_User" , logado.Split(";")[2]);
+                
                 HttpContext.Session.SetString("_UserId" , logado.Split(";")[6]);
 
                 return LocalRedirect("~/Publicacao");

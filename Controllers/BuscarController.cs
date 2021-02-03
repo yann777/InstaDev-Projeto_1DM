@@ -26,6 +26,12 @@ namespace InstaDev_Projeto_1DM.Controllers
                 x.Split(";")[7] == form["pesquisar"]
             );
 
+            if(form["Username"] == busca)
+            {
+                usuario.Username = busca;
+            }
+
+            
             return LocalRedirect("~/");
 
         }

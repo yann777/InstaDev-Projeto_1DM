@@ -30,7 +30,7 @@ namespace InstaDev_Projeto_1DM.Controllers
         public IActionResult Cadastrar(IFormCollection form)
         {
 
-                var id = cadastroModel.ReadAll().Count();
+                var id = cadastroModel.ReadAll().Count(); //Count() Serve para contar as linhas de um arquivo ou a quantidade de objetos e vai gerar um valor inteiro
 
            
             

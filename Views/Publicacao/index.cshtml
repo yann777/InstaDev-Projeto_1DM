@@ -84,7 +84,7 @@
         </form>
     </div>
 
-    @foreach (Publicacao post in ViewBag.Publicacoes)
+    @foreach (Publicacao listarPost in ViewBag.Publicacoes)
     {
         <div class="posts">
             <div class="info-user-post">
@@ -92,21 +92,28 @@
 
                 </div>
                 <div class="name-user"> 
-                        <p>@post.IdUsuario</p>
+                        <p>@listarPost.RetornarNome(listarPost.IdUsuario)</p>
                     <p><a href="#">São Paulo, Brasil</a></p>
-                </div>         
+                </div>
             </div>
             <div class="imgPost">
                
-            <img src="../imgPublicacao/Publicacoes/@post.ImgPublicacao">
+             <img src="../imgPublicacao/Publicacoes/@listarPost.ImgPublicacao">
              
             </div>
+            <div class="curtirecomentar">
+                <img src="../images/heart.svg" alt="Curtir">
+                <img src="../images/Comentarios.svg" alt="Comentar">
+            </div>
             <div class="legenda">
-                    <a href="../Perfil">@ViewBag.User</a>
-                    <p>@post.Legenda</p>
+                <a href="">@listarPost.RetornarNome(listarPost.IdUsuario)</a>
+                <p>@listarPost.Legenda</p>
             </div>
             <div class="comentarios">
-
+                <form class="form-Comentarios">
+                    <input type="text" name="Comentario" id="" placeholder="Adicione um comentário....">
+                    <label type="submit">Comentar</label>
+                </form>
             </div>
         </div>
     }

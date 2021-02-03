@@ -17,15 +17,16 @@ namespace InstaDev_Projeto_1DM.Controllers
 
         Publicacao publicacaoModel = new Publicacao();
 
+         Cadastro cadastroModel = new Cadastro();
+
         public IActionResult Index()
         {
 
             ViewBag.User = HttpContext.Session.GetString("_User");
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             ViewBag.UserId = HttpContext.Session.GetString("_UserId");
-
-            Cadastro cadastroModel = new Cadastro();
             ViewBag.Cadastros = cadastroModel.ReadAll();
+
             
             ViewBag.Publicacoes = publicacaoModel.ReadAll();
             return View();
@@ -38,13 +39,14 @@ namespace InstaDev_Projeto_1DM.Controllers
                 Publicacao novaPublicacao = new Publicacao();
                 Cadastro usuario = new Cadastro();
 
-                ViewBag.UserId = HttpContext.Session.GetString("_UserId");
-
-                var id = publicacaoModel.ReadAll().Count(); //Count() Serve para contar as linhas de um arquivo ou a quantidade de objetos
+               
+                var id = publicacaoModel.ReadAll().Count(); //Count() Serve para contar as linhas de um arquivo ou a quantidade de objetos e vai gerar um valor inteiro //O problema está nesta linha
 
                 novaPublicacao.Legenda = form["Legenda"];
+                
                 novaPublicacao.IdPublicacao = id+1;
-                novaPublicacao.IdUsuario = ViewBag.UserId;
+
+                novaPublicacao.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId"));  //Armazenei dentro de uma váriavel string //Variavel está dendo eero ao cadastrar devido ao tipo da variavel idUsuario
                 
                 novaPublicacao.Status = true;
 
@@ -79,7 +81,7 @@ namespace InstaDev_Projeto_1DM.Controllers
            
         }
 
-        [Route("Publicacao/{idPublicacao}")]
+        [Route("Publicacao/{IdPublicacao}")]
         public IActionResult Excluir(int IdPublicacao)
         {
             publicacaoModel.Delete(IdPublicacao);
