@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace INSTADEV_EDIT.Models
+namespace Projeto_InstaDev.Models
 {
     public class InstaDevBase
     {

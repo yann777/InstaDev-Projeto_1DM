@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using INSTADEV_EDIT.Models;
+using Projeto_InstaDev.Models;
 
-namespace INSTADEV_EDIT.Controllers
+namespace Projeto_InstaDev.Controllers
 {
     public class HomeController : Controller
     {
