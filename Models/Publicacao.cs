@@ -85,7 +85,7 @@ namespace InstaDev_Projeto_1DM.Models
             RewriteCSV(PATH, linhas); 
         }
 
-        public string RetornarNome(int id) //Id usuario que cadastrou a publicação
+        public string RetornarNomeeImagem(int id) //Id usuario que cadastrou a publicação
           {
             Cadastro nome = new Cadastro(); //Usuário
             List<Cadastro> csv = nome.ReadAll();
@@ -94,5 +94,6 @@ namespace InstaDev_Projeto_1DM.Models
           
             return userPubli.Username;
          }
+ 
     }
 }

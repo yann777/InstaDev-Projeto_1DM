@@ -89,32 +89,38 @@
         <div class="posts">
             <div class="info-user-post">
                 <div class="img-user">
-
+                    
                 </div>
                 <div class="name-user"> 
-                        <p>@listarPost.RetornarNome(listarPost.IdUsuario)</p>
+                    <p>@listarPost.RetornarNomeeImagem(listarPost.IdUsuario)</p>
                     <p><a href="#">São Paulo, Brasil</a></p>
                 </div>
             </div>
-            <div class="imgPost">
-               
-             <img src="../imgPublicacao/Publicacoes/@listarPost.ImgPublicacao">
-             
+            <div class="imgPost">  
+                <img src="../imgPublicacao/Publicacoes/@listarPost.ImgPublicacao">
             </div>
             <div class="curtirecomentar">
                 <img src="../images/heart.svg" alt="Curtir">
                 <img src="../images/Comentarios.svg" alt="Comentar">
             </div>
             <div class="legenda">
-                <a href="">@listarPost.RetornarNome(listarPost.IdUsuario)</a>
+                <a href="#">@listarPost.RetornarNomeeImagem(listarPost.IdUsuario)</a>
                 <p>@listarPost.Legenda</p>
             </div>
-            <div class="comentarios">
-                <form class="form-Comentarios">
-                    <input type="text" name="Comentario" id="" placeholder="Adicione um comentário....">
-                    <label type="submit">Comentar</label>
+            @if (ViewBag.UserName != null && ViewBag.User != null )
+            {
+                <div class="post-comentarios">
+                    <a href="#">@ViewBag.User</a>
+                    <p></p>
+                </div>
+                <div class="comentarios">
+                <form class="form-Comentarios" method="POST" action='@Url.Action("CadastrarComentario")'>
+                    <input class="comentario-input" type="text" name="Comentario" id="" placeholder="Adicione um comentário....">
+                    <button type="submit">Comentar</button>
                 </form>
             </div>
+            }
+           
         </div>
     }
     </div>

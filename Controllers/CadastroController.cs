@@ -44,6 +44,28 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novoCadastro.IdUser = id+1;
                 novoCadastro.Status = true;
                 
+                  if(form.Files.Count > 0)
+            {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagesUser/Perfis");
+
+                if(!Directory.Exists(folder)){
+                    Directory.CreateDirectory(folder);
+                }
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagesUser/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
+                }
+
+                novoCadastro.ImagemPerfil   = file.FileName;                
+            }
+            else
+            {
+                novoCadastro.ImagemPerfil=  "padrao.png";
+            }
 
                 cadastroModel.Create(novoCadastro);
 

@@ -68,5 +68,17 @@ namespace InstaDev_Projeto_1DM.Models
             RewriteCSV(PATH, linhas); 
         }
 
+        //  public string RetornarId(int id) 
+        //   {
+
+        //     // Buscando id da publicação para conseguir comentar
+
+        //     Publicacao publi = new Publicacao();
+        //     List<Publicacao> csv = publi.ReadAll();
+
+        //     Publicacao idPubli = csv.Find(x => x.IdUsuario == id);
+          
+        //     return idPubli.IdPublicacao;
+        //  }
     }
 }

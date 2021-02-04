@@ -32,7 +32,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             ViewBag.Cadastros = cadastroModel.ReadAll();
             Publicacao publicacaoModel = new Publicacao();
             ViewBag.Publicacoes = publicacaoModel.ReadAll(); 
-            return View();
+            return LocalRedirect("~/Login");
         }
 
     }   

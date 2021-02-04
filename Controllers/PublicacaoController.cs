@@ -16,8 +16,9 @@ namespace InstaDev_Projeto_1DM.Controllers
     {
 
         Publicacao publicacaoModel = new Publicacao();
+        Comentario comentarioModel = new Comentario();
 
-         Cadastro cadastroModel = new Cadastro();
+        Cadastro cadastroModel = new Cadastro();
 
         public IActionResult Index()
         {
@@ -30,6 +31,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             
             ViewBag.Publicacoes = publicacaoModel.ReadAll();
             return View();
+
         }
 
         [Route("CadastrarPublicacao")]
@@ -89,6 +91,20 @@ namespace InstaDev_Projeto_1DM.Controllers
 
         }
 
+        [Route("Publicacao/CadastrarComentario")]
+        public IActionResult CadastrarComentario(IFormCollection form)
+        {
+            Comentario comment = new Comentario();
+            Publicacao commentPubli = new Publicacao();
+            comment.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId")); 
+            comment.Mensagem = form["Comentario"];
+            
+
+            comentarioModel.Create(comment);
+
+            ViewBag.Comentarios = comentarioModel.ReadAll();
+            return LocalRedirect("~/Publicacao");
+        }
 
     }
 }

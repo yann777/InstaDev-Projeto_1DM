@@ -10,20 +10,6 @@
     margin-left: 85px;
 }
 
-.container-home{
-    width:45%;
-    height: 300px;
-    margin: 300px auto;
-    border: 1px solid rgb(212, 212, 212);
-}
-
-.logar-se{
-    margin: 30px 40px;
-}
-
-.logar-se h1{
-    font-size: 30px;
-}
 
 /*Váriaveis Globais*/
 
@@ -610,8 +596,8 @@ input[type=search]{
  }
 
  .posts{
-    width: 730px;
-    height: 800px;
+    width: 690px;
+    height: 880px;
     border: 1px solid rgb(219, 218, 218);
     margin-top: 80px;
  }
@@ -649,18 +635,18 @@ input[type=search]{
  }
 
  .imgPost{
-    width: 730px;
+    width: 690px;
     height: 500px;
     border-bottom: 1px solid #dee2e6;
  }
 
  .imgPost img{
-    width: 730px;
+    width: 690px;
     height: 500px;
  }
 
 .curtirecomentar{
-    widows: 730px;
+    widows: 690px;
     height:45px;
     display: flex;
     margin-left: 10px;
@@ -675,8 +661,8 @@ input[type=search]{
 }
 
  .legenda{
-     width:730px;
-     height: 90px;
+     width:690px;
+     height: 50px;
      display:flex;
  }
 
@@ -692,20 +678,42 @@ input[type=search]{
     color: rgb(27, 27, 27);
  }
 
+.post-comentarios{
+    width: 690px;
+    height: auto;
+    margin: 20px 15px;
+    display: flex;
+}
+
+.post-comentarios a{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    margin: 0 13px;;
+}
+
+.post-comentarios p{
+    margin-left: 15px;
+    font-size: 15px;
+}
+
  .comentarios{
-    width:730px;
+    width:690px;
     height:80px;
-    margin: -10px 0;
+    margin: 70px -45px;
  }
 
- .comentarios input[type=text]{
-    width:440px;
-    border:none;
-    border-bottom: 1px solid rgb(199, 199, 199);
-    background-color: rgb(236, 236, 236);
+ .comentario-input{
+    width: 420px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    background-color: rgb(224, 224, 224);
  }
 
- .comentarios label{
+ .comentarios button{
     color: #3ea4ec;
+    border: none;
+    padding: 8px 10px;
  }
 /*TELA DE FEED*/

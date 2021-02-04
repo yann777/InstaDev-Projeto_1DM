@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\FIC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
+      "projectUniqueName": "C:\\Users\\FIC\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
       "projectName": "InstaDev-Projeto_1DM",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\InstaDev-Projeto_1DM\\obj\\",
+      "projectPath": "C:\\Users\\FIC\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
+      "packagesPath": "C:\\Users\\FIC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FIC\\Desktop\\InstaDev-Projeto_1DM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
