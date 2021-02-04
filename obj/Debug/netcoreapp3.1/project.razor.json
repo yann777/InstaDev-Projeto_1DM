@@ -14420,6 +14420,11 @@
       "FilePath": "c:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
