@@ -5,7 +5,7 @@ using Projeto_InstaDev.Interfaces;
 
 namespace Projeto_InstaDev.Models
 {
-    public class Usuario : InstaDevBase , IEditarPerfil 
+    public class Usuario : InstaDevBase , IEdicao
     {
         public int IdUsuario { get; set; }
         public string Nome { get; set; }
