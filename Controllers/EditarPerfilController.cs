@@ -4,33 +4,86 @@ using Projeto_InstaDev.Models;
 
 namespace Projeto_InstaDev.Controllers
 {
-    [Route("EditarPerfil")]
+    [Route("Editar")]
     public class EditarPerfilController : Controller
     {
-        EditarPerfil usuario = new EditarPerfil(); 
-
-        [Route("Listar")]
-        public IActionResult Index(){
-            ViewBag.EditarPerfil = usuario.ReadAll();
+         public IActionResult Index()
+        {
             return View();
-       }
+        }
 
-        [Route("Cadastrar")]
-        public IActionResult Cadastrar(IFormCollection form){
-            EditarPerfil novoUsuario = new EditarPerfil();
-            novoUsuario.Nome = form["Nome"];
-            novoUsuario.Nomeusuario = form["Nomeuser"];
-            novoUsuario.Email = form["Email"];
+        Usuario usuarioModel = new Usuario();
 
-            return LocalRedirect("~/EditarPerfil/Listar");
-       }
+        [Route("Usuario")]
+        public IActionResult Usuario()
+        {
+            ViewBag.Usuarios = usuarioModel.ReadAll();
+            return View();
+        }
 
-        [Route("{usuario}")]
-        public IActionResult Excluir(EditarPerfil usuario){
-           usuario.Delete(usuario);
-           ViewBag.EditarPerfil = usuario.ReadAll();
+        [Route("Alterar")]
+        public IActionResult Alterar(IFormCollection form)
+        {
+           Usuario alterarUsuario = new Usuario();
+           
+           alterarUsuario.Nome     = (form["Nome"]);
+           alterarUsuario.Foto     = (form["Foto"]);
+           alterarUsuario.Username = (form["Username"]); 
+           alterarUsuario.Email    = (form["Email"]); 
 
-           return LocalRedirect("~/EditarPerfil/Listar");
-       }
+           usuarioModel.EditarUsuario(alterarUsuario);
+
+           ViewBag.Usuarios = usuarioModel.ReadAll();
+
+           return LocalRedirect("~/Editar");
+        }
+
+        [Route("Deletar/{id}")]
+        public IActionResult Delete(int id)
+        {
+            usuarioModel.DeleteUsuario(id);
+
+            ViewBag.Usuarios = usuarioModel.ReadAll();            
+
+            return LocalRedirect("~/");
+        }
+
+
+        [Route("EditImagem")]
+         public IActionResult EditImagem(IFormCollection form)
+        {            
+            Usuario novoUsuario   = new Usuario();
+            novoUsuario.IdUsuario = Int32.Parse(form["IdUsuario"]);
+            novoUsuario.Foto      = form["Foto"];
+
+            if(form.Files.Count > 0)
+            {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Usuarios");
+
+                if(!Directory.Exists(folder)){
+                    Directory.CreateDirectory(folder);
+                }
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
+                }
+                novoUsuario.Foto   = file.FileName;                
+            }
+            else
+            {
+                novoUsuario.Foto   = "padrao.png";
+            }
+            // Upload Final
+
+            usuarioModel.CadastrarUsuario(novoUsuario);
+
+            ViewBag.Usuarios = usuarioModel.ReadAll();
+            return LocalRedirect("~/");
+        }
+
     }
 }

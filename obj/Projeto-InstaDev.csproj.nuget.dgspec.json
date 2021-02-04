@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto_InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj": {}
+    "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto_InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto_InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj",
         "projectName": "Projeto-InstaDev",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto_InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\Projeto-InstaDev.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto_InstaDev\\Projeto-InstaDev\\obj\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\Projeto-InstaDev\\Projeto-InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"

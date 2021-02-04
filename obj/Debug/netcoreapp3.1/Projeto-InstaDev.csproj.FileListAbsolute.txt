@@ -108,3 +108,12 @@ C:\Users\andre\OneDrive\Área de Trabalho\Projeto_InstaDev\Projeto-InstaDev\obj\
 C:\Users\andre\OneDrive\Área de Trabalho\Projeto_InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.pdb
 C:\Users\andre\OneDrive\Área de Trabalho\Projeto_InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Área de Trabalho\Projeto_InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.csproj.CopyComplete
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.RazorAssemblyInfo.cache
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.RazorAssemblyInfo.cs
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.dll
+C:\Users\andre\OneDrive\Área de Trabalho\Projeto-InstaDev\Projeto-InstaDev\obj\Debug\netcoreapp3.1\Projeto-InstaDev.pdb
