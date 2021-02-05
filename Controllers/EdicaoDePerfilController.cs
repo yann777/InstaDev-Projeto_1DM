@@ -45,10 +45,10 @@ namespace InstaDev_Projeto_1DM.Controllers
         {
            Cadastro alterarCadastro = new Cadastro();
             
-           alterarCadastro.NomeCompleto     = (form["Nome"]);
-           alterarCadastro.ImagemPerfil     = (form["Foto"]);
-           alterarCadastro.Username         = (form["Username"]); 
-           alterarCadastro.Email            = (form["Email"]); 
+           alterarCadastro.NomeCompleto     = form["Nome"];
+           alterarCadastro.ImagemPerfil     = form["Foto"];
+           alterarCadastro.Username         = form["Username"]; 
+           alterarCadastro.Email            = form["Email"]; 
 
            cadastroModel.Update(alterarCadastro);
 

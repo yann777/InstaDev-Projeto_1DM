@@ -71,6 +71,7 @@ namespace InstaDev_Projeto_1DM.Models
         public void Update(Cadastro alterarCadastro)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[0] == alterarCadastro.Email);
             linhas.RemoveAll(x => x.Split(";")[1] == alterarCadastro.NomeCompleto);
             linhas.RemoveAll(x => x.Split(";")[2] == alterarCadastro.Username);
             linhas.RemoveAll(x => x.Split(";")[3] == alterarCadastro.DataDeNascimento);
