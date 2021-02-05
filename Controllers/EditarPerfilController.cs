@@ -7,7 +7,7 @@ namespace Projeto_InstaDev.Controllers
     [Route("Editar")]
     public class EditarPerfilController : Controller
     {
-         public IActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
@@ -26,6 +26,7 @@ namespace Projeto_InstaDev.Controllers
         {
            Usuario alterarUsuario = new Usuario();
            
+         
            alterarUsuario.Nome     = (form["Nome"]);
            alterarUsuario.Foto     = (form["Foto"]);
            alterarUsuario.Username = (form["Username"]); 
@@ -38,7 +39,7 @@ namespace Projeto_InstaDev.Controllers
            return LocalRedirect("~/Editar");
         }
 
-        [Route("Deletar/{id}")]
+        [Route("Excluir/{id}")]
         public IActionResult Delete(int id)
         {
             usuarioModel.DeleteUsuario(id);
@@ -60,13 +61,13 @@ namespace Projeto_InstaDev.Controllers
             {
                 // Upload Início
                 var file    = form.Files[0];
-                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Usuarios");
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Imagem/Usuarios");
 
                 if(!Directory.Exists(folder)){
                     Directory.CreateDirectory(folder);
                 }
                 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Imagem/", folder, file.FileName);
                 using (var stream = new FileStream(path, FileMode.Create))  
                 {  
                     file.CopyTo(stream);  
@@ -80,9 +81,10 @@ namespace Projeto_InstaDev.Controllers
             // Upload Final
 
             usuarioModel.CadastrarUsuario(novoUsuario);
-
             ViewBag.Usuarios = usuarioModel.ReadAll();
-            return LocalRedirect("~/");
+            
+            return LocalRedirect("~/Editar");
+
         }
 
     }

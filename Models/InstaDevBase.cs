@@ -3,50 +3,44 @@ using System.IO;
 
 namespace Projeto_InstaDev.Models
 {
-    public class InstaDevBase
+    public abstract class InstaDev_base
     {
-        public void CreateFolderAndFile(string _path)
+        public void CreateFolderAndFile(string _path){
 
+            string folder = _path.Split("/")[0];
+
+            if(!Directory.Exists(folder))
             {
-                string folder = _path.Split("/")[0];
-
-                if(!Directory.Exists(folder))
-                {
-                    Directory.CreateDirectory(folder);
-                }
-
-                if(!File.Exists(_path))
-                {
-                    File.Create(_path);
-                }
+                Directory.CreateDirectory(folder);
             }
 
-        public List<string> ReadAllLinesCSV(string path)
-        
-        {
-            List<string> linhas = new List<string>();
+            if(!File.Exists(_path))
+            {
+                File.Create(_path).Close();
+            }
+        }
 
-            using(StreamReader file = new StreamReader(path))
+        public List<string> ReadAllLinesCSV(string PATH){
             
+            List<string> linhas = new List<string>();
+            using(StreamReader file = new StreamReader(PATH))
             {
                 string linha;
-
-                while ((linha = file.ReadLine()) != null)
+                while((linha = file.ReadLine()) != null)
                 {
                     linhas.Add(linha);
                 }
             }
-
-            return linhas;            
+            return linhas;
         }
-        
-        public void RewriteCSV(string _path, List<string> linhas)
+
+        public void RewriteCSV(string PATH, List<string> linhas)
         {
-            using(StreamWriter saida = new StreamWriter(_path))
+            using(StreamWriter output = new StreamWriter(PATH))
             {
                 foreach (var item in linhas)
                 {
-                    saida.Write(item + '\n');
+                    output.Write(item + "\n");
                 }
             }
         }
