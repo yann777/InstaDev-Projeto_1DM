@@ -81,3 +81,4 @@ C:\Users\FIC\Desktop\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.
 C:\Users\FIC\Desktop\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.genruntimeconfig.cache
 C:\Users\FIC\Desktop\InstaDev-Projeto_1DM\obj\Debug\net5.0\InstaDev-Projeto_1DM.csproj.CopyComplete
 C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\Publicacao\index.cshtml.g.cs
+C:\Users\User\OneDrive\Área de Trabalho\InstaDev-Projeto_1DM\obj\Debug\net5.0\Razor\Views\EdicaoDePerfil\index.cshtml.g.cs
