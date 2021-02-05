@@ -26,6 +26,22 @@ namespace InstaDev_Projeto_1DM.Controllers
             return View();
         }
 
+        public int GerarId()
+        {
+            Random numAleatorio = new Random();
+
+            int id = numAleatorio.Next(100, 999);
+
+            cadastroModel.GerarIdUsuario(id);
+            
+            while (cadastroModel.GerarIdUsuario(id))
+            {
+                id = numAleatorio.Next(100, 999);
+                cadastroModel.GerarIdUsuario(id);
+            }
+            return id;
+        }
+
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
@@ -41,7 +57,7 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novoCadastro.Username = form["Username"];
                 novoCadastro.DataDeNascimento = form["DataDeNascimento"];
                 novoCadastro.Password = form["Senha"];
-                novoCadastro.IdUser = id+1;
+                novoCadastro.IdUser = GerarId();
                 novoCadastro.Status = true;
                 
 

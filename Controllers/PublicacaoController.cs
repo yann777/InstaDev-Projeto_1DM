@@ -17,8 +17,10 @@ namespace InstaDev_Projeto_1DM.Controllers
 
         Publicacao publicacaoModel = new Publicacao();
 
-         Cadastro cadastroModel = new Cadastro();
+        Cadastro cadastroModel = new Cadastro();
 
+        Comentario comentario = new Comentario();
+        
         public IActionResult Index()
         {
 
@@ -27,10 +29,28 @@ namespace InstaDev_Projeto_1DM.Controllers
             ViewBag.UserId = HttpContext.Session.GetString("_UserId");
             ViewBag.Cadastros = cadastroModel.ReadAll();
 
+            ViewBag.Publicacao = publicacaoModel.ReadAll();
+            ViewBag.Cadastros = new Cadastro();
+            ViewBag.Comentarios = new Comentario();
+
             
             ViewBag.Publicacoes = publicacaoModel.ReadAll();
             return View();
         }
+
+        public int GerarId()
+        {
+            Random numAleatorio = new Random();
+            int id = numAleatorio.Next(100, 999);
+            publicacaoModel.GerarIdPostagem(id);
+            while (publicacaoModel.GerarIdPostagem(id))
+            {
+                id = numAleatorio.Next(100, 999);
+                publicacaoModel.GerarIdPostagem(id);
+            }
+            return id;
+        }
+
 
         [Route("CadastrarPublicacao")]
         public IActionResult Cadastrar(IFormCollection form)
@@ -44,7 +64,7 @@ namespace InstaDev_Projeto_1DM.Controllers
 
                 novaPublicacao.Legenda = form["Legenda"];
                 
-                novaPublicacao.IdPublicacao = id+1;
+                novaPublicacao.IdPublicacao = GerarId();
 
                 novaPublicacao.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId"));  //Armazenei dentro de uma váriavel string //Variavel está dendo eero ao cadastrar devido ao tipo da variavel idUsuario
                 
@@ -81,14 +101,45 @@ namespace InstaDev_Projeto_1DM.Controllers
            
         }
 
-        [Route("Publicacao/{IdPublicacao}")]
-        public IActionResult Excluir(int IdPublicacao)
+        [Route("Publicacao/{id}")]
+        public IActionResult Excluir(int id)
         {
-            publicacaoModel.Delete(IdPublicacao);
+            publicacaoModel.Delete(id);
+            comentario.Delete(id);
+            ViewBag.Publicacoes = publicacaoModel.ReadAll();
+            ViewBag.Comentarios = new Comentario();
+            
             return LocalRedirect("~/Publicacao");
-
         }
 
+
+
+        [Route("Comentario/{id}")]
+        public IActionResult ExcluirComent(int id)
+        {
+            comentario.Delete(id);
+            ViewBag.Comentarios = new Comentario();
+            
+            return LocalRedirect("~/Publicacao");
+        }
+
+
+
+          [Route("Comentar")]
+        public IActionResult Comentar(IFormCollection form)
+        {
+            Publicacao publicacao = new Publicacao();
+            Comentario coment = new Comentario();
+
+            coment.IdComentario = GerarId();
+            coment.IdPublicacao = int.Parse(form["id_publicacao"]);
+            coment.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId")); 
+            coment.UserName = ViewBag.User;
+            coment.Mensagem = form["Comentario"];
+            comentario.Create(coment);
+
+            return Redirect("~/Publicacao");
+        }
 
     }
 }

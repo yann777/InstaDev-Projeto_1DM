@@ -44,7 +44,7 @@
 
             <div class="menu-lateral-perfil">
                 <div class="img-user-2">
-
+                   
                 </div>
                 <div class="menu-info-user">
                     <h5><a href="../Perfil">@ViewBag.User</a></h5>
@@ -109,10 +109,22 @@
                 <a href="">@listarPost.RetornarNome(listarPost.IdUsuario)</a>
                 <p>@listarPost.Legenda</p>
             </div>
+            @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(listarPost.IdPublicacao))
+            {
+                        <div class="comentario-post">                               
+                            <h2>@coment.UserName</h2>
+                            <p>@coment.Mensagem</p>
+                            @if (ViewBag.IdLogado == coment.IdUsuario.ToString())
+                            {
+                                <a class="excluir excluirComent" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
+                            } 
+                        </div>
+            } 
             <div class="comentarios">
-                <form class="form-Comentarios">
+                <form class="form-Comentarios" method="POST" action='@Url.Action("Comentar")'>
+                    <input type="hidden" value="@listarPost.IdPublicacao" name="id_publicacao">
                     <input type="text" name="Comentario" id="" placeholder="Adicione um comentário....">
-                    <label type="submit">Comentar</label>
+                    <button type="submit">Comentar</button>
                 </form>
             </div>
         </div>

@@ -94,5 +94,27 @@ namespace InstaDev_Projeto_1DM.Models
           
             return userPubli.Username;
          }
+
+
+          public bool GerarIdPostagem(int id)
+        {
+            bool existe = false;
+            List<string> csv = new List<string>();
+            csv = ReadAllLinesCSV(PATH);
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            return existe;
+        }
+
     }
 }

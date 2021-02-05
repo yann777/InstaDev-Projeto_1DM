@@ -11,6 +11,7 @@ namespace InstaDev_Projeto_1DM.Models
         public string Mensagem { get; set;}
         public int IdUsuario { get; set;}
         public int IdPublicacao { get; set;}
+        public string UserName { get; set;}
 
         public const string PATH = "Database/Comentarios.csv";
 
@@ -27,7 +28,7 @@ namespace InstaDev_Projeto_1DM.Models
 
         private string PrepararLinha(Comentario c)
         {
-            return $"{c.IdComentario};{c.Mensagem};{c.IdUsuario};{c.IdPublicacao}";
+            return $"{c.IdComentario};{c.Mensagem};{c.IdUsuario};{c.IdPublicacao};{c.UserName}";
         }
 
         public void Delete(int IdComentario)
@@ -66,6 +67,12 @@ namespace InstaDev_Projeto_1DM.Models
             linhas.RemoveAll(x => x.Split(";")[1] == Mensagem.Mensagem);
             linhas.Add( PrepararLinha(Mensagem) );                        
             RewriteCSV(PATH, linhas); 
+        }
+
+        public List<Comentario> BuscarId(int id_publi)
+        {
+            List<Comentario> comentarios = ReadAll().FindAll(x => x.IdPublicacao == id_publi);
+            return comentarios;
         }
 
     }

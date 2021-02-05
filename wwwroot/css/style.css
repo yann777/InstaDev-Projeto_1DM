@@ -610,8 +610,8 @@ input[type=search]{
  }
 
  .posts{
-    width: 730px;
-    height: 800px;
+    width: 690px;
+    height: 880px;
     border: 1px solid rgb(219, 218, 218);
     margin-top: 80px;
  }
@@ -649,18 +649,18 @@ input[type=search]{
  }
 
  .imgPost{
-    width: 730px;
+    width: 690px;
     height: 500px;
     border-bottom: 1px solid #dee2e6;
  }
 
  .imgPost img{
-    width: 730px;
+    width: 690px;
     height: 500px;
  }
 
 .curtirecomentar{
-    widows: 730px;
+    widows: 690px;
     height:45px;
     display: flex;
     margin-left: 10px;
@@ -675,7 +675,7 @@ input[type=search]{
 }
 
  .legenda{
-     width:730px;
+     width:690px;
      height: 90px;
      display:flex;
  }
@@ -692,10 +692,27 @@ input[type=search]{
     color: rgb(27, 27, 27);
  }
 
+.comentario-post{
+    width:690px;
+    height: auto;
+    display: flex;
+    margin: -10px 26px;
+}
+
+.comentario-post h2{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comentario-post p{
+    font-size: 14px;
+    margin-left: 15px;
+}
+
  .comentarios{
-    width:730px;
+    width:690px;
     height:80px;
-    margin: -10px 0;
+    margin: 50px 0;
  }
 
  .comentarios input[type=text]{
@@ -703,9 +720,13 @@ input[type=search]{
     border:none;
     border-bottom: 1px solid rgb(199, 199, 199);
     background-color: rgb(236, 236, 236);
+    margin: 20px 20px;
  }
 
- .comentarios label{
+ .comentarios button{
+    padding: 8px 8px;
     color: #3ea4ec;
+    margin: 0 50px;
+    border: none;
  }
 /*TELA DE FEED*/

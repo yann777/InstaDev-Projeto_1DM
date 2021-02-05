@@ -79,5 +79,37 @@ namespace InstaDev_Projeto_1DM.Models
             RewriteCSV(PATH, linhas); 
         }
 
+          public bool GerarIdUsuario(int id)
+        {
+            bool existe = false;
+
+            List<string> csv = new List<string>();
+
+            csv = ReadAllLinesCSV(PATH);
+
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+
+                
+                
+                if (id == int.Parse(linha[6]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            
+            return existe;
+        }
+        public List<Cadastro> BuscarNome(int id_user)
+        {
+            List<Cadastro> usersId = ReadAll().FindAll(x => x.IdUser == id_user);
+            return usersId;
+        }
+
     }
 }
