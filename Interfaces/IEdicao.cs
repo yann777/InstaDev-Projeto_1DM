@@ -1,6 +1,6 @@
-using Projeto_InstaDev.Models;
+using InstaDev_Projeto_1DM.Models;
 
-namespace Projeto_InstaDev.Interfaces
+namespace InstaDev_Projeto_1DM.Interfaces
 {
     public interface IEdicao
     {

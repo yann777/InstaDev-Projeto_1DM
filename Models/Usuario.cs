@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Projeto_InstaDev.Interfaces;
+using InstaDev_Projeto_1DM.Interfaces;
+using InstaDev_Projeto_1DM.Models;
 
-namespace Projeto_InstaDev.Models
+namespace  InstaDev_Projeto_1DM.Models
 {
-    public class Usuario : InstaDevBase , IEdicao
+    public class Usuario : InstadevBase , IEdicao
     {
         public int IdUsuario { get; set; }
 
