@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FIC\\Desktop\\Projeto_InstaDev_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {}
+    "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FIC\\Desktop\\Projeto_InstaDev_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {
+    "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FIC\\Desktop\\Projeto_InstaDev_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
         "projectName": "InstaDev-Projeto_1DM",
-        "projectPath": "C:\\Users\\FIC\\Desktop\\Projeto_InstaDev_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
-        "packagesPath": "C:\\Users\\FIC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIC\\Desktop\\Projeto_InstaDev_1DM\\Projeto-InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
