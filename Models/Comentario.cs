@@ -54,6 +54,7 @@ namespace InstaDev_Projeto_1DM.Models
                 comentario.Mensagem = linha[1];
                 comentario.IdUsuario = Int32.Parse( linha[2] );
                 comentario.IdPublicacao = Int32.Parse( linha[3] );
+                comentario.UserName = linha[4];
 
                 comentarios.Add(comentario);
             }

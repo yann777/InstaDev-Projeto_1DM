@@ -109,15 +109,11 @@
                 <a href="">@listarPost.RetornarNome(listarPost.IdUsuario)</a>
                 <p>@listarPost.Legenda</p>
             </div>
-            @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(listarPost.IdPublicacao))
+            @foreach (Comentario comentario in ViewBag.Comentarios.BuscarId(listarPost.IdPublicacao))
             {
                         <div class="comentario-post">                               
-                            <h2>@coment.UserName</h2>
-                            <p>@coment.Mensagem</p>
-                            @if (ViewBag.IdLogado == coment.IdUsuario.ToString())
-                            {
-                                <a class="excluir excluirComent" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
-                            } 
+                            <h2>@comentario.UserName</h2>
+                            <p>@comentario.Mensagem</p>
                         </div>
             } 
             <div class="comentarios">

@@ -66,7 +66,7 @@ namespace InstaDev_Projeto_1DM.Controllers
                 
                 novaPublicacao.IdPublicacao = GerarId();
 
-                novaPublicacao.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId"));  //Armazenei dentro de uma váriavel string //Variavel está dendo eero ao cadastrar devido ao tipo da variavel idUsuario
+                novaPublicacao.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));  //Armazenei dentro de uma váriavel string //Variavel está dendo eero ao cadastrar devido ao tipo da variavel idUsuario
                 
                 novaPublicacao.Status = true;
 
@@ -134,7 +134,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             coment.IdComentario = GerarId();
             coment.IdPublicacao = int.Parse(form["id_publicacao"]);
             coment.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UserId")); 
-            coment.UserName = ViewBag.User;
+            coment.UserName =   HttpContext.Session.GetString("_User");
             coment.Mensagem = form["Comentario"];
             comentario.Create(coment);
 
