@@ -58,6 +58,7 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novoCadastro.DataDeNascimento = form["DataDeNascimento"];
                 novoCadastro.Password = form["Senha"];
                 novoCadastro.IdUser = GerarId();
+                novoCadastro.ImagemPerfil = form["foto"];
                 novoCadastro.Status = true;
                 
 

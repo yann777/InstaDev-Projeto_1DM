@@ -478,14 +478,14 @@ input[type=search]{
 .content{
     width: 95%;
     max-width: 1200px;
-    height: 100%;
+    height: 130%;
     margin: 100px auto;
     background-color: #fff;
     display: flex;
 }
 
 .texto-editar{
-    width: 35%;
+    width: 27%;
     height: 38.125em;
     /* background-color: rgba(0, 255, 255, 0.411); */
     border-right: solid 1px #F1F1F1;
@@ -517,7 +517,7 @@ input[type=search]{
     width: 70%;
     height: 100%;
     /* background-color: rgba(204, 204, 204, 0.664); */
-    margin: auto;
+    margin: 40px auto;
 }
 
 .alinhar-esquerda{
@@ -569,8 +569,8 @@ input[type=search]{
     font-size: 0.875em;
     color: black;
     font-weight: 600;
-    margin: 0 1em;
-    margin-bottom: 6.3em;
+    margin:  0 0.2em;
+    margin-bottom: 8.3em;
 }
 
 .preencher-nome{
@@ -589,6 +589,7 @@ input[type=search]{
     width: 27.23em;
     height: 2.30em;
     padding-left: 1em;
+    margin-right: 2em;
     color: #000;
     border: solid 1px #DCDCDC;
     border-radius: 2px;
@@ -613,7 +614,8 @@ input[type=search]{
 
 .nome-usuario h2{
     font-size: 0.875em;
-    margin-right: 1em;
+    margin-right: 0.4em;
+    margin-left: 30px;
     margin-bottom: 9.99em;
     color: #000;
     font-weight: 600;
@@ -633,6 +635,8 @@ input[type=search]{
     border: solid 1px #DCDCDC;
     border-radius: 2px;
     font-size: 0.812em;
+    margin-top: 55px;
+    margin-right: 100px;
 }
 
 .preencher-usuario p{

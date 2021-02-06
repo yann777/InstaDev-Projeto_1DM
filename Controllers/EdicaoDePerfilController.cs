@@ -48,11 +48,11 @@ namespace InstaDev_Projeto_1DM.Controllers
            alterarCadastro.NomeCompleto     = form["Nome"];
            alterarCadastro.ImagemPerfil     = form["Foto"];
            alterarCadastro.Username         = form["Username"]; 
-           alterarCadastro.Email            = form["Email"]; 
+           alterarCadastro.Email            = form["Email"];
+           alterarCadastro.Status           = true; 
 
            cadastroModel.Update(alterarCadastro);
-
-           ViewBag.Cadastros = cadastroModel.ReadAll();
+           ViewBag.CadastrosAtualizados = cadastroModel.ReadAll();
 
            return LocalRedirect("~/EdicaoDePerfil");
         }
