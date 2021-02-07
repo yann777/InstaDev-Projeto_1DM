@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Projeto_InstaDev.Models;
+using InstaDev_Projeto_1DM.Models;
 
-namespace Projeto_InstaDev.Controllers
+namespace InstaDev_Projeto_1DM.Controllers
 {
     [Route("Editar")]
     public class EditarPerfilController : Controller
