@@ -37,36 +37,51 @@ namespace InstaDev_Projeto_1DM.Controllers
         public IActionResult Cadastro()
         {
             ViewBag.Cadastros = CadastroModel.ReadAll();
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            ViewBag.User = HttpContext.Session.GetString("_User");
+            ViewBag.UserId = HttpContext.Session.GetString("_UserId");
+            ViewBag.Email = HttpContext.Session.GetString("_Email");
+            ViewBag.Imagem = HttpContext.Session.GetString("_Imagem");
             return View();
         }
 
         [Route("Alterar")]
         public IActionResult Alterar(IFormCollection form)
         {
-           Cadastro alterarCadastro = new Cadastro();
-            
-           alterarCadastro.NomeCompleto     = form["Nome"];
-           alterarCadastro.ImagemPerfil     = form["Foto"];
-           alterarCadastro.Username         = form["Username"]; 
-           alterarCadastro.Email            = form["Email"];
-           alterarCadastro.Status           = true; 
+           Cadastro User = new Cadastro();
+                
+                User.NomeCompleto        = form["Nome"];
+                
+                if (User.NomeCompleto == null)
+                    {
+                        User.NomeCompleto = HttpContext.Session.GetString("_UserName");
+                    }
+                User.ImagemPerfil        = form["Foto"];
+                    
+                
+                User.Email       = form["Email"];
+                if (User.Email == null)
+                    {
+                        User.Email = HttpContext.Session.GetString("_Email");
+                    }
 
-           cadastroModel.Update(alterarCadastro);
-           ViewBag.CadastrosAtualizados = cadastroModel.ReadAll();
+                User.Username    = form["Username"];
+                if (User.Username == null)
+                    {
+                        User.Username = HttpContext.Session.GetString("_User");
+                    }
 
-           return LocalRedirect("~/EdicaoDePerfil");
+                User.IdUser   = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+                int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+
+                User.Status = true;
+                
+                cadastroModel.Update(User, id);
+                
+
+                return LocalRedirect("~/Perfil");
         }
-
-        [Route("Excluir/{id}")]
-        public IActionResult Delete(int id)
-        {
-            CadastroModel.Delete(id);
-
-            ViewBag.Cadastros = cadastroModel.ReadAll();            
-
-            return LocalRedirect("~/");
-        }
-
 
         [Route("EditImagem")]
          public IActionResult EditImagem(IFormCollection form)

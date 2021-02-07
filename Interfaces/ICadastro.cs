@@ -11,6 +11,6 @@ namespace InstaDev_Projeto_1DM.Interfaces
 
         void Delete(int IdUser);
 
-        void Update(Cadastro alterarCadastro);
+        void Update(Cadastro p, int id);
     }
 }

@@ -25,8 +25,6 @@
 
 </header>
 
-<div class="cotainer">
-
     <section class="editar-perfil">
             <div class="content">
 
@@ -35,7 +33,6 @@
                         <h1>Editar Perfil</h1>
                     </div>
                 </div>
-
                 <aside class="editar">
                     <form method="POST" action='@Url.Action("Alterar")' enctype="multipart/form-data">
                     <div class="perfil">
@@ -45,6 +42,8 @@
                             <div class="texto">
                                 <h2>yes_baby</h2>
                              
+                             
+
                                
                                 <div class="file-input">
                                     <input type="file" name="Foto" id="Foto" class="file">
@@ -105,7 +104,7 @@
 
                                     </div>
                                     <div class="botao-desativar">
-                                       <a class="navbar-brand" asp-area="Link para deletar a conta" asp-controller="Editar" asp-action="Delete">Desativar minha conta definitivamente</a>
+                                       <a class="navbar-brand" asp-area="Link para deletar a conta" asp-controller="Cadastro" asp-action="Excluir">Desativar minha conta definitivamente</a>
 
                                     </div>
                                 </aside>
@@ -114,6 +113,3 @@
                     </form>
 
                 </aside>
-
-            </div>
-    </section>

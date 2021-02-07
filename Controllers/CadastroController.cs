@@ -22,7 +22,8 @@ namespace InstaDev_Projeto_1DM.Controllers
             ViewBag.UserName = cadastroModel.ReadAll();
             ViewBag.User = cadastroModel.ReadAll();
             ViewBag.UserId = cadastroModel.ReadAll();
-           
+            ViewBag.Email = HttpContext.Session.GetString("_Email");
+
             return View();
         }
 
@@ -58,8 +59,31 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novoCadastro.DataDeNascimento = form["DataDeNascimento"];
                 novoCadastro.Password = form["Senha"];
                 novoCadastro.IdUser = GerarId();
-                novoCadastro.ImagemPerfil = form["foto"];
                 novoCadastro.Status = true;
+
+                 if(form.Files.Count > 0)
+            {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Usuarios");
+
+                if(!Directory.Exists(folder)){
+                    Directory.CreateDirectory(folder);
+                }
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
+                }
+
+                novoCadastro.ImagemPerfil   = file.FileName;                
+            }
+            else
+            {
+                novoCadastro.ImagemPerfil =  "padrao.png";
+            }
+
                 
 
                 cadastroModel.Create(novoCadastro);
@@ -75,7 +99,7 @@ namespace InstaDev_Projeto_1DM.Controllers
         public IActionResult Excluir(int IdUser)
         {
             cadastroModel.Delete(IdUser);
-            return LocalRedirect("~/Cadastro");
+            return LocalRedirect("~/Login");
         }
     }
 }

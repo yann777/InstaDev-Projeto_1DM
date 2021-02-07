@@ -27,6 +27,9 @@ namespace InstaDev_Projeto_1DM.Controllers
             ViewBag.User = HttpContext.Session.GetString("_User");
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             ViewBag.UserId = HttpContext.Session.GetString("_UserId");
+            ViewBag.Email = HttpContext.Session.GetString("_Email");
+            ViewBag.Imagem = HttpContext.Session.GetString("_Imagem");
+            
             ViewBag.Cadastros = cadastroModel.ReadAll();
 
             ViewBag.Publicacao = publicacaoModel.ReadAll();
@@ -69,6 +72,7 @@ namespace InstaDev_Projeto_1DM.Controllers
                 novaPublicacao.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));  //Armazenei dentro de uma váriavel string //Variavel está dendo eero ao cadastrar devido ao tipo da variavel idUsuario
                 
                 novaPublicacao.Status = true;
+
 
                 if(form.Files.Count > 0)
             {

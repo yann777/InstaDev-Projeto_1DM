@@ -69,15 +69,11 @@ namespace InstaDev_Projeto_1DM.Models
             return cadastros;
         }
 
-        public void Update(Cadastro alterarCadastro)
+        public void Update(Cadastro p, int id)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == alterarCadastro.Email);
-            linhas.RemoveAll(x => x.Split(";")[1] == alterarCadastro.NomeCompleto);
-            linhas.RemoveAll(x => x.Split(";")[2] == alterarCadastro.Username);
-            linhas.RemoveAll(x => x.Split(";")[3] == alterarCadastro.DataDeNascimento);
-            linhas.RemoveAll(x => x.Split(";")[5] == alterarCadastro.ImagemPerfil);
-            linhas.Add( PrepararLinha(alterarCadastro) );                        
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            linhas.Add( PrepararLinha(p) );                        
             RewriteCSV(PATH, linhas); 
         }
 

@@ -20,6 +20,7 @@ namespace InstaDev_Projeto_1DM.Controllers
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             ViewBag.User = HttpContext.Session.GetString("_User");
             ViewBag.UserId = HttpContext.Session.GetString("_UserId");
+            ViewBag.Email = HttpContext.Session.GetString("_Email");
             return View();
         }
 
