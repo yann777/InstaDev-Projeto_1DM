@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj": {}
+    "C:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj": {
+    "C:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
+        "projectUniqueName": "C:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
         "projectName": "InstaDev-Projeto_1DM",
-        "projectPath": "C:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
-        "packagesPath": "C:\\Users\\nilma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\obj\\",
+        "projectPath": "C:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
+        "packagesPath": "C:\\Users\\DEV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nilma\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DEV\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

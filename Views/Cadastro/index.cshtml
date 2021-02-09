@@ -1,0 +1,28 @@
+@model Cadastro
+
+@{
+    ViewData["Title"] = "Cadastre-se";
+}
+
+<div class="container">
+    <div class="formulario">
+        <img src="../images/Instadev.svg" alt="">
+        <h5>Cadastre-se para ver videos e <br> fotos do seus amigos</h5>
+            <form class="cadastro" action='@Url.Action("Cadastrar")' method="POST" >
+                <input type="email" name="Email" id="" placeholder="E-mail" required>
+                <input type="text" name="NomeCompleto" id="" placeholder="Nome Completo" required>
+                <input type="text" name="Username" id="" placeholder="Nome de usuário" required>
+                <input type="date" name="DataDeNascimento" id="">
+                <input type="password" name="Senha" id="" placeholder="Senha" required>
+                <button type="submit">Cadastre-se</button>
+            </form>
+        <h6>Ao se cadastrar em nosso site você concorda com nossos <br> <a href="">Termos, Política de dados e Políticas de Cookies</a></h6>    
+    </div><!--Formulario DIV-->
+    <div class="jatemconta">
+        <p>Tem uma conta?<a href="../Login"> Conecte-se</a></p>
+    </div><!--Já tem conta?-->
+    <div class="app">
+        <p>Obtenha o aplicativo</p>
+        <a href="#"><img src="../images/app_store 1.svg" alt=""></a>
+        <a href="#"><img src="../images/google_play 1.svg" alt=""></a>
+    </div>

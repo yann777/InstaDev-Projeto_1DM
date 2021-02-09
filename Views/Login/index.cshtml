@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container">
+            <div class="formulario-2">
+                <img src="images/Instadev.svg" alt="">
+                    <form action='@Url.Action("Logar")' method="post">
+                        <input type="Email" name="Email" id="" placeholder="E-mail">
+                        <p>OU</p>
+                        <input type="text" name="Username" id="" placeholder="Nome de usuário">
+                        <input type="password" name="Senha" id="" placeholder="Senha" required>
+                        <button type="entrar">Entrar</button>
+                         <i class="erro">@TempData.Peek("Mensagem")</i>
+                    </form> 
+                        <h6 style="text-decoration: none;" class="esqueceu" href="#"> Esqueceu a senha?</h6>
+
+            </div><!--Login-->
+            <div class="jatemconta">
+                <p>Não tem uma conta?<a href="../Cadastro"> Cadastre-se</a></p>
+            </div>
+            <div class="app">
+                <p>Obtenha o aplicativo</p>
+                <a href="#"><img src="images/app_store 1.svg" alt="Imagem da apple store" srcset=""></a>
+                <a href="#"><img src="images/google_play 1.svg" alt="Imagem da google play store"></a>
+            </div>
+</div><!--Container-->

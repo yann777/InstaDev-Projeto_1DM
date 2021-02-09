@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\InstaDev-Projeto_1DM.csproj",
+  "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,18 +14392,33 @@
   "RootNamespace": "InstaDev_Projeto_1DM",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\nilma\\Desktop\\InstaDev-Projeto_1DM\\Views\\Publicacao\\index.cshtml",
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Cadastro\\index.cshtml",
+      "TargetPath": "Views\\Cadastro\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Home\\index.cshtml",
+      "TargetPath": "Views\\Home\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Publicacao\\index.cshtml",
       "TargetPath": "Views\\Publicacao\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DEV\\Desktop\\Projeto-InstaDev\\Views\\Login\\index.cshtml",
+      "TargetPath": "Views\\Login\\index.cshtml",
       "FileKind": "mvc"
     }
   ],
