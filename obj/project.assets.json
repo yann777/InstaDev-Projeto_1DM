@@ -8,26 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\andre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\InstaDev\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
       "projectName": "InstaDev-Projeto_1DM",
-      "projectPath": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\InstaDev-Projeto_1DM\\Projeto-InstaDev\\obj\\",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\InstaDev\\Projeto-InstaDev\\InstaDev-Projeto_1DM.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Área de Trabalho\\InstaDev\\Projeto-InstaDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
